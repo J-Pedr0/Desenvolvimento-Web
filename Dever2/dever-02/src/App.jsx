@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
+//Taldo para sempre ❤
+
 function App() {
   const [numero, setNumero] = useState(0)
   const [quantidadeMl, setQuantidadeMl] = useState(0)
