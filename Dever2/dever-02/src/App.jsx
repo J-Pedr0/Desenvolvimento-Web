@@ -18,14 +18,14 @@ function App() {
       setNumero(numero + 1)
       calcular()
       metaDoDia()
-      setHistorico(historico + " || " + "Copo: " + (parseInt(numero) + 1) + " - " + date+"\n")
+      // setHistorico(historico + " || " + "Copo: " + (parseInt(numero) + 1) + " - " + date+"\n")
+      setHistorico(` Número do copo:${numero + 1} ${date} ${historico}`);
     } else {
       alert("Valores inválidos\nA quantidade de ml deve se maior que 0 e meta maior que 2")
     }
   }
   function zera() {
     setNumero(0)
-    setQuantidadeMl(0)
     setQuantidade(0)
     setHistorico("")
     setMensagem("")
@@ -71,10 +71,11 @@ function App() {
       </div>
       <div>
         <h2>{mensagem}</h2>
-        <h2>Histórico: {historico}</h2>
       </div>
+      <div className="historico">
+          <p>{historico}</p>
+        </div>
     </>
   )
 }
-
 export default App
